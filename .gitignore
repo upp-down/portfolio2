@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Claude Code local settings (个人权限配置，不上传)
+.claude/settings.local.json
+
+# Editor
+.vscode/
+*.swp
+*.swo

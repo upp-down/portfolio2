@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIXIA ZHOU · Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- ==========================================
+       Splash 启动区
+       ========================================== -->
+  <section class="splash" id="splash">
+    <!-- Decorative elements -->
+    <div class="splash__orb splash__orb--1"></div>
+    <div class="splash__orb splash__orb--2"></div>
+    <div class="splash__orb splash__orb--3"></div>
+    <div class="splash__ring"></div>
+
+    <h1 class="splash__title" id="splashTitle">SIXIA ZHOU</h1>
+    <p class="splash__subtitle" id="splashSubtitle">
+      设计与代码的双栖实践者，从Figma组件库到Vue3前端开发，打通创意到落地的完整链路。
+    </p>
+
+    <div class="splash__hint">
+      <span class="splash__hint-text">Scroll</span>
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       目录页开始 — Contents
+       ========================================== -->
+  <section class="contents-section" id="contents">
+    <!-- 上半区：大标题 -->
+    <div class="contents__header">
+      <h2 class="contents__heading js-contents-anim">CONTENT</h2>
+    </div>
+
+    <!-- 下半区：目录列表 -->
+    <div class="contents__body">
+      <ul class="contents__list">
+        <!-- 条目1：个人信息 -->
+        <li class="contents__item js-contents-anim">
+          <a href="#about">
+            <span class="contents__num">01.</span>
+            <span class="contents__title">ABOUT</span>
+            <span class="contents__subtitle">个人信息</span>
+          </a>
+        </li>
+        <!-- 条目2：主要作品 -->
+        <li class="contents__item js-contents-anim">
+          <a href="#works">
+            <span class="contents__num">02.</span>
+            <span class="contents__title">WORKS</span>
+            <span class="contents__subtitle">主要作品</span>
+          </a>
+        </li>
+        <!-- 条目3：联系我 -->
+        <li class="contents__item js-contents-anim">
+          <a href="#contact">
+            <span class="contents__num">03.</span>
+            <span class="contents__title">CONTACT</span>
+            <span class="contents__subtitle">联系我</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- 目录页结束 -->
+
+  <!-- Section Transition -->
+  <div class="section-fade"></div>
+
+  <!-- ==========================================
+       01. 个人信息区 — ABOUT
+       ========================================== -->
+  <section class="section" id="about">
+    <!-- 区块标题：中文大号 + 英文小号 -->
+    <div class="js-animate">
+      <h2 class="about__title-zh">个人信息</h2>
+      <p class="about__title-en">ABOUT</p>
+    </div>
+
+    <!-- 个人简介（占位符，待替换） -->
+    <p class="about__intro js-animate">
+      这里是一段关于我的个人简介
+    </p>
+
+    <!-- 教育背景 -->
+    <div class="edu-block js-animate">
+      <p class="edu-block__school">广东医科大学 · 信息管理与信息系统</p>
+      <p class="edu-block__detail">2023.09 – 2027.06</p>
+      <p class="edu-block__detail">GPA：3.9（专业前1%） <span>|</span> 英语 CET-4 / CET-6</p>
+      <ul class="edu-block__honors">
+        <li>国家奖学金</li>
+        <li>校长奖学金</li>
+        <li>连续两年综合一等奖学金</li>
+        <li>蓝桥杯视觉设计赛国赛一等奖</li>
+        <li>计算机设计大赛平面设计国赛二等奖</li>
+      </ul>
+    </div>
+
+    <!-- 内部分隔线 -->
+    <hr class="about__divider js-animate">
+
+    <!-- 实习经历 -->
+    <div class="exp-item js-animate">
+      <p class="exp-item__company">珠海中科技术研究院有限公司 · 前端开发实习生</p>
+      <span class="exp-item__date">2026.04 – 2026.06</span>
+      <p class="exp-item__desc">
+        参与AI肿瘤辅助分析系统PC端开发（Vue3+TypeScript+Element Plus），累计发现并记录20+项交互缺陷，独立修复10+项前端Bug，涉及Vue组件重构与ECharts图表数据绑定优化。
+      </p>
+    </div>
+
+    <div class="exp-item js-animate">
+      <p class="exp-item__company">中国青年网 · 线上实习生</p>
+      <span class="exp-item__date">2025.07 – 2025.09</span>
+      <p class="exp-item__desc">
+        负责稿件审阅与内容优化，日均处理30+篇稿件，累计审阅1600+篇，提炼出"简洁化表达+视觉化辅助"的内容优化方向。
+      </p>
+    </div>
+  </section>
+
+  <!-- Section Transition -->
+  <div class="section-fade"></div>
+
+  <!-- ==========================================
+       02. 作品展示区 — WORKS
+       ========================================== -->
+  <section class="works-section" id="works">
+    <h2 class="section__title js-animate">Selected Works</h2>
+
+    <article class="card js-animate stagger-1" data-card="1">
+      <span class="card__number">01 / 03</span>
+      <div class="card__img">
+        <!-- 替换为你的作品图片 -->
+        <img src="https://picsum.photos/seed/oktalk/600/400"
+             alt="OKTalk · AI口语学习"
+             loading="lazy"
+             width="600" height="400">
+      </div>
+      <div class="card__text">
+        <span class="card__tag">Visual Design</span>
+        <h3 class="card__title">OKTalk · AI口语学习</h3>
+        <p class="card__desc">为低龄儿童打造的AI英语口语语音交互学习视觉体系，获蓝桥杯视觉设计赛国赛一等奖。</p>
+      </div>
+    </article>
+
+    <article class="card js-animate stagger-2" data-card="2">
+      <span class="card__number">02 / 03</span>
+      <div class="card__img">
+        <!-- 替换为你的作品图片 -->
+        <img src="https://picsum.photos/seed/physics/600/400"
+             alt="海报设计：当古籍力学遇见现代设计"
+             loading="lazy"
+             width="600" height="400">
+      </div>
+      <div class="card__text">
+        <span class="card__tag">Poster Design</span>
+        <h3 class="card__title">海报设计：当古籍力学遇见现代设计</h3>
+        <p class="card__desc">以"弘扬中国古代物理知识"为核心选题的海报视觉设计，获计算机设计大赛平面设计国赛二等奖。</p>
+      </div>
+    </article>
+
+    <article class="card js-animate stagger-3" data-card="3">
+      <span class="card__number">03 / 03</span>
+      <div class="card__img">
+        <!-- 替换为你的作品图片 -->
+        <img src="https://picsum.photos/seed/heart/600/400"
+             alt="心聆 · AI情绪疗愈"
+             loading="lazy"
+             width="600" height="400">
+      </div>
+      <div class="card__text">
+        <span class="card__tag">Product Design · Dev</span>
+        <h3 class="card__title">心聆 · AI情绪疗愈</h3>
+        <p class="card__desc">面向大学生的心理健康陪伴小程序，主打AI情绪感知+音乐疗愈+心情记录，已完成MVP版本开发。</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- Section Transition -->
+  <div class="section-fade"></div>
+
+  <!-- ==========================================
+       03. 联系我区 — CONTACT
+       ========================================== -->
+  <section class="section" id="contact">
+    <h2 class="section__title js-animate">Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card js-animate">
+        <p class="contact-card__label">Phone</p>
+        <p class="contact-card__value"><a href="tel:13266106283">13266106283</a></p>
+      </div>
+      <div class="contact-card js-animate">
+        <p class="contact-card__label">Email</p>
+        <p class="contact-card__value"><a href="mailto:3259958611@qq.com">3259958611@qq.com</a></p>
+      </div>
+      <div class="contact-card js-animate">
+        <p class="contact-card__label">WeChat</p>
+        <p class="contact-card__value">doudouoni6283</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <footer class="footer">
+    <p class="footer__copy">&copy; 2026 SIXIA ZHOU</p>
+    <p class="footer__tagline">Design with purpose. Code with precision.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
