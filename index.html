@@ -17,60 +17,165 @@
   </button>
 
   <!-- ==========================================
-       Splash 启动区
+       Splash 启动区 — 杂志编辑网格
        ========================================== -->
   <section class="splash" id="splash">
-    <!-- Decorative elements -->
-    <div class="splash__orb splash__orb--1"></div>
-    <div class="splash__orb splash__orb--2"></div>
-    <div class="splash__orb splash__orb--3"></div>
-    <div class="splash__ring"></div>
+    <!-- 12栏网格容器 -->
+    <div class="splash__grid">
 
-    <h1 class="splash__title" id="splashTitle">SIXIA ZHOU</h1>
-    <p class="splash__subtitle" id="splashSubtitle">
-      设计与代码的双栖实践者，从Figma组件库到Vue3前端开发，打通创意到落地的完整链路。
-    </p>
+      <!-- Row 1: 刊头 (col 1-3) | 期号 (col 10-12) -->
+      <div class="splash__masthead splash__grid-item" data-col="1 / 4">
+        <span class="splash__masthead-year">2026</span>
+        <span class="splash__masthead-sep">/</span>
+        <span class="splash__masthead-label">PORTFOLIO</span>
+      </div>
 
-    <div class="splash__hint">
-      <span class="splash__hint-text">Scroll</span>
-      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <div class="splash__issue splash__grid-item" data-col="10 / 13">
+        <span>ISSUE No.01</span>
+      </div>
+
+      <!-- Row 2: 主标题 (col 1-8) -->
+      <h1 class="splash__title splash__grid-item" id="splashTitle" data-col="1 / 9">SIXIA ZHOU</h1>
+
+      <!-- Row 3: 副标题 (col 1-8) -->
+      <p class="splash__tagline splash__grid-item" data-col="1 / 9">DESIGNER · DEVELOPER · CREATOR</p>
+
+      <!-- Row 4: 导语 (col 7-12) -->
+      <div class="splash__lead splash__grid-item" id="splashSubtitle" data-col="7 / 13">
+        <p class="splash__lead-text">
+          设计与代码的双栖实践者，从 Figma 组件库到 Vue3 前端开发，打通创意到落地的完整链路。
+        </p>
+      </div>
+
+      <!-- Row 5: 底部线 (col 1-12) + 滚动提示 (col 1-3) -->
+      <div class="splash__bottom-bar splash__grid-item" data-col="1 / 13">
+        <div class="splash__bottom-line"></div>
+      </div>
+
+      <div class="splash__hint splash__grid-item" data-col="1 / 4">
+        <span class="splash__hint-text">SCROLL</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+
     </div>
+
+    <!-- 双色块分割线 -->
+    <div class="splash__split-line"></div>
   </section>
 
   <!-- ==========================================
-       目录页开始 — Contents
+       目录页 — 杂志 TOC 版式
        ========================================== -->
   <section class="contents-section" id="contents">
 
-    <!-- HEADER / MAGAZINE TITLE -->
-    <div class="contents-header">
-      <div class="contents-kicker">2026 / PORTFOLIO</div>
-      <h1 class="contents-title">C O N T E N T</h1>
-      <div class="contents-subtitle">SELECTED WORKS · EXPERIENCE · PROFILE</div>
-    </div>
+    <div class="contents__layout">
 
-    <!-- GRID SYSTEM -->
-    <div class="contents-grid">
-      <a href="#experience" class="contents-item">
-        <div class="contents-num">(01)</div>
-        <div class="contents-heading">EXPERIENCE</div>
-        <div class="contents-desc">Frontend development / UI engineering / AI product interface design</div>
-      </a>
-      <a href="#education" class="contents-item">
-        <div class="contents-num">(02)</div>
-        <div class="contents-heading">EDUCATION</div>
-        <div class="contents-desc">Academic background / awards / design &amp; engineering training</div>
-      </a>
-      <a href="#works" class="contents-item">
-        <div class="contents-num">(03)</div>
-        <div class="contents-heading">WORKS</div>
-        <div class="contents-desc">Selected projects / case studies / interface systems</div>
-      </a>
-      <a href="#contact" class="contents-item">
-        <div class="contents-num">(04)</div>
-        <div class="contents-heading">CONTACT</div>
-        <div class="contents-desc">Availability / email / collaboration inquiries</div>
-      </a>
+      <!-- 左侧编辑栏 -->
+      <aside class="contents__sidebar">
+        <div class="contents__sidebar-block">
+          <span class="contents__sidebar-label">YEAR</span>
+          <span class="contents__sidebar-value">2026</span>
+        </div>
+        <div class="contents__sidebar-block">
+          <span class="contents__sidebar-label">ISSUE</span>
+          <span class="contents__sidebar-value">No.01</span>
+        </div>
+        <div class="contents__sidebar-block">
+          <span class="contents__sidebar-label">SECTION</span>
+          <span class="contents__sidebar-value">Selected Works<br>Experience<br>Profile</span>
+        </div>
+        <div class="contents__sidebar-line"></div>
+      </aside>
+
+      <!-- 右侧主区 -->
+      <div class="contents__main">
+
+        <!-- 刊头 -->
+        <div class="contents__header">
+          <div class="contents__kicker">2026 / PORTFOLIO</div>
+          <h1 class="contents__title">CONTENT</h1>
+          <div class="contents__subtitle">SELECTED WORKS · EXPERIENCE · PROFILE</div>
+        </div>
+
+        <!-- 分隔线 -->
+        <div class="contents__rule"></div>
+
+        <!-- 目录条目 -->
+        <div class="contents__entries">
+
+          <!-- 01 主条目 — 全宽 -->
+          <a href="#experience" class="contents__entry contents__entry--featured">
+            <div class="contents__entry-left">
+              <span class="contents__entry-num">01</span>
+              <span class="contents__entry-label">FEATURED</span>
+            </div>
+            <div class="contents__entry-center">
+              <h2 class="contents__entry-heading">EXPERIENCE</h2>
+              <p class="contents__entry-desc">Frontend development / UI engineering / AI product interface design</p>
+            </div>
+            <div class="contents__entry-right">
+              <span class="contents__entry-page">P.03</span>
+            </div>
+          </a>
+
+          <div class="contents__rule contents__rule--thin"></div>
+
+          <!-- 02 / 03 并列 -->
+          <div class="contents__row">
+            <a href="#education" class="contents__entry contents__entry--half">
+              <div class="contents__entry-left">
+                <span class="contents__entry-num">02</span>
+              </div>
+              <div class="contents__entry-center">
+                <h2 class="contents__entry-heading">EDUCATION</h2>
+                <p class="contents__entry-desc">Academic background / awards / design &amp; engineering training</p>
+              </div>
+              <div class="contents__entry-right">
+                <span class="contents__entry-page">P.05</span>
+              </div>
+            </a>
+
+            <a href="#works" class="contents__entry contents__entry--half">
+              <div class="contents__entry-left">
+                <span class="contents__entry-num">03</span>
+              </div>
+              <div class="contents__entry-center">
+                <h2 class="contents__entry-heading">WORKS</h2>
+                <p class="contents__entry-desc">Selected projects / case studies / interface systems</p>
+              </div>
+              <div class="contents__entry-right">
+                <span class="contents__entry-page">P.07</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="contents__rule contents__rule--thin"></div>
+
+          <!-- 04 辅助窄条 -->
+          <a href="#contact" class="contents__entry contents__entry--compact">
+            <div class="contents__entry-left">
+              <span class="contents__entry-num">04</span>
+            </div>
+            <div class="contents__entry-center">
+              <h2 class="contents__entry-heading">CONTACT</h2>
+              <p class="contents__entry-desc">Availability / email / collaboration inquiries</p>
+            </div>
+            <div class="contents__entry-right">
+              <span class="contents__entry-page">P.10</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- 底部页脚线 -->
+        <div class="contents__footer-rule"></div>
+        <div class="contents__footer">
+          <span>SIXIA ZHOU</span>
+          <span>PORTFOLIO 2026</span>
+        </div>
+
+      </div>
+
     </div>
 
   </section>
@@ -80,53 +185,165 @@
   <div class="section-fade"></div>
 
   <!-- ==========================================
-       01. 个人信息区 — ABOUT
+       01. 个人信息页 — ABOUT / PROFILE
        ========================================== -->
-  <section class="section" id="about">
-    <!-- 区块标题：中文大号 + 英文小号 -->
-    <div class="js-animate">
-      <h2 class="about__title-zh">个人信息</h2>
-      <p class="about__title-en">ABOUT</p>
+  <section class="profile-page" id="about">
+
+    <div class="profile__layout">
+
+      <!-- 顶部：标题 + 头像位 -->
+      <div class="profile__header">
+        <div class="profile__title-block js-animate">
+          <span class="profile__page-num">02</span>
+          <h2 class="profile__title-en">ABOUT</h2>
+          <h2 class="profile__title-zh">个人信息</h2>
+        </div>
+
+        <div class="profile__avatar js-animate">
+          <div class="profile__avatar-circle">
+            <span class="profile__avatar-text">SZ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中部：个人简介 -->
+      <div class="profile__intro js-animate">
+        <p class="profile__intro-text">
+          设计与代码的双栖实践者，从 Figma 组件库到 Vue3 前端开发，打通创意到落地的完整链路。
+        </p>
+      </div>
+
+      <!-- 分隔线 -->
+      <div class="profile__rule"></div>
+
+      <!-- 下半：教育信息 -->
+      <div class="profile__education js-animate">
+        <div class="profile__edu-header">
+          <span class="profile__edu-label">EDUCATION</span>
+          <span class="profile__edu-years">2023 – 2027</span>
+        </div>
+
+        <div class="profile__edu-main">
+          <h3 class="profile__edu-school">广东医科大学</h3>
+          <p class="profile__edu-major">信息管理与信息系统</p>
+        </div>
+
+        <div class="profile__edu-stats">
+          <div class="profile__stat">
+            <span class="profile__stat-value">3.9</span>
+            <span class="profile__stat-label">GPA</span>
+          </div>
+          <div class="profile__stat">
+            <span class="profile__stat-value">TOP 1%</span>
+            <span class="profile__stat-label">专业排名</span>
+          </div>
+          <div class="profile__stat">
+            <span class="profile__stat-value">CET-6</span>
+            <span class="profile__stat-label">英语</span>
+          </div>
+        </div>
+
+        <div class="profile__honors">
+          <div class="profile__honor-item">
+            <span class="profile__honor-num">01</span>
+            <span class="profile__honor-text">国家奖学金</span>
+          </div>
+          <div class="profile__honor-item">
+            <span class="profile__honor-num">02</span>
+            <span class="profile__honor-text">校长奖学金</span>
+          </div>
+          <div class="profile__honor-item">
+            <span class="profile__honor-num">03</span>
+            <span class="profile__honor-text">连续两年综合一等奖学金</span>
+          </div>
+          <div class="profile__honor-item">
+            <span class="profile__honor-num">04</span>
+            <span class="profile__honor-text">蓝桥杯视觉设计赛国赛一等奖</span>
+          </div>
+          <div class="profile__honor-item">
+            <span class="profile__honor-num">05</span>
+            <span class="profile__honor-text">计算机设计大赛平面设计国赛二等奖</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- 个人简介（占位符，待替换） -->
-    <p class="about__intro js-animate">
-      这里是一段关于我的个人简介
-    </p>
+  </section>
 
-    <!-- 教育背景 -->
-    <div class="edu-block js-animate">
-      <p class="edu-block__school">广东医科大学 · 信息管理与信息系统</p>
-      <p class="edu-block__detail">2023.09 – 2027.06</p>
-      <p class="edu-block__detail">GPA：3.9（专业前1%） <span>|</span> 英语 CET-4 / CET-6</p>
-      <ul class="edu-block__honors">
-        <li>国家奖学金</li>
-        <li>校长奖学金</li>
-        <li>连续两年综合一等奖学金</li>
-        <li>蓝桥杯视觉设计赛国赛一等奖</li>
-        <li>计算机设计大赛平面设计国赛二等奖</li>
-      </ul>
+  <!-- ==========================================
+       02. 实习经历页 — EXPERIENCE
+       ========================================== -->
+  <section class="experience-page" id="experience">
+
+    <div class="experience__layout">
+
+      <!-- 顶部大标题 -->
+      <div class="experience__header js-animate">
+        <span class="experience__page-num">03</span>
+        <h2 class="experience__title-en">EXPERIENCE</h2>
+        <h2 class="experience__title-zh">实习经历</h2>
+        <div class="experience__subtitle">PROFESSIONAL JOURNEY</div>
+      </div>
+
+      <!-- 分隔线 -->
+      <div class="experience__rule"></div>
+
+      <!-- 经历模块 -->
+      <div class="experience__entries">
+
+        <!-- 经历 01 -->
+        <article class="experience__entry js-animate">
+          <div class="experience__entry-header">
+            <span class="experience__entry-num">01</span>
+            <div class="experience__entry-meta">
+              <h3 class="experience__company">珠海中科技术研究院有限公司</h3>
+              <span class="experience__role">前端开发实习生</span>
+              <span class="experience__date">2026.04 – 2026.06</span>
+            </div>
+          </div>
+
+          <ul class="experience__bullets">
+            <li>参与 AI 肿瘤辅助分析系统 PC 端开发</li>
+            <li>技术栈：Vue3 + TypeScript + Element Plus</li>
+            <li>累计发现并记录 20+ 项交互缺陷</li>
+            <li>独立修复 10+ 项前端 Bug</li>
+            <li>涉及 Vue 组件重构与 ECharts 图表优化</li>
+          </ul>
+        </article>
+
+        <div class="experience__rule experience__rule--thin"></div>
+
+        <!-- 经历 02 -->
+        <article class="experience__entry js-animate">
+          <div class="experience__entry-header">
+            <span class="experience__entry-num">02</span>
+            <div class="experience__entry-meta">
+              <h3 class="experience__company">中国青年网</h3>
+              <span class="experience__role">线上实习生</span>
+              <span class="experience__date">2025.07 – 2025.09</span>
+            </div>
+          </div>
+
+          <ul class="experience__bullets">
+            <li>负责稿件审阅与内容优化</li>
+            <li>日均处理 30+ 篇稿件</li>
+            <li>累计审阅 1600+ 篇</li>
+            <li>提炼"简洁化表达 + 视觉化辅助"优化方向</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- 底部页脚 -->
+      <div class="experience__footer-rule"></div>
+      <div class="experience__footer">
+        <span>SIXIA ZHOU</span>
+        <span>PORTFOLIO 2026</span>
+      </div>
+
     </div>
 
-    <!-- 内部分隔线 -->
-    <hr class="about__divider js-animate">
-
-    <!-- 实习经历 -->
-    <div class="exp-item js-animate">
-      <p class="exp-item__company">珠海中科技术研究院有限公司 · 前端开发实习生</p>
-      <span class="exp-item__date">2026.04 – 2026.06</span>
-      <p class="exp-item__desc">
-        参与AI肿瘤辅助分析系统PC端开发（Vue3+TypeScript+Element Plus），累计发现并记录20+项交互缺陷，独立修复10+项前端Bug，涉及Vue组件重构与ECharts图表数据绑定优化。
-      </p>
-    </div>
-
-    <div class="exp-item js-animate">
-      <p class="exp-item__company">中国青年网 · 线上实习生</p>
-      <span class="exp-item__date">2025.07 – 2025.09</span>
-      <p class="exp-item__desc">
-        负责稿件审阅与内容优化，日均处理30+篇稿件，累计审阅1600+篇，提炼出"简洁化表达+视觉化辅助"的内容优化方向。
-      </p>
-    </div>
   </section>
 
   <!-- Section Transition -->

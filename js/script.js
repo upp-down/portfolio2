@@ -34,25 +34,41 @@
 
   // ── Splash Scroll Parallax ──────────────────────
   var splashTitle = document.getElementById('splashTitle');
-  var splashSubtitle = document.getElementById('splashSubtitle');
+  var splashTagline = document.querySelector('.splash__tagline');
+  var splashLead = document.getElementById('splashSubtitle');
   var splashHint = document.querySelector('.splash__hint');
+  var splashMasthead = document.querySelector('.splash__masthead');
+  var splashIssue = document.querySelector('.splash__issue');
 
   function onScroll() {
     var y = window.scrollY;
-    var t = Math.min(y / 200, 1);   // 0→1 over 200px
+    var t = Math.min(y / 300, 1);   // 0→1 over 300px
 
-    // Title: move up, shrink, fade
-    var titleScale = 1 - 0.3 * t;     // 1 → 0.7
-    var titleY     = -60 * t;          // 0 → -60px
-    var titleOp    = 1 - 0.8 * t;      // 1 → 0.2
-    splashTitle.style.transform = 'translateY(' + titleY + 'px) scale(' + titleScale + ')';
-    splashTitle.style.opacity   = titleOp;
+    // Title: fade out + slight scale down
+    var titleScale = 1 - 0.15 * t;
+    var titleOp    = 1 - 0.9 * t;
+    splashTitle.style.transform = 'translateY(' + (-40 * t) + 'px) scale(' + titleScale + ')';
+    splashTitle.style.opacity   = Math.max(0, titleOp);
 
-    // Subtitle: fade out + slight move up
-    var subY  = -30 * t;
-    var subOp = 1 - t;
-    splashSubtitle.style.transform = 'translateY(' + subY + 'px)';
-    splashSubtitle.style.opacity   = subOp;
+    // Tagline: fade out + move up
+    if (splashTagline) {
+      splashTagline.style.opacity = Math.max(0, 0.6 - t * 2);
+      splashTagline.style.transform = 'translateY(' + (-25 * t) + 'px)';
+    }
+
+    // Lead text: fade out
+    if (splashLead) {
+      splashLead.style.opacity = Math.max(0, 1 - t * 1.5);
+      splashLead.style.transform = 'translateY(' + (-20 * t) + 'px)';
+    }
+
+    // Masthead & issue: fade out
+    if (splashMasthead) {
+      splashMasthead.style.opacity = Math.max(0, 0.7 - t * 2);
+    }
+    if (splashIssue) {
+      splashIssue.style.opacity = Math.max(0, 1 - t * 2);
+    }
 
     // Scroll hint: fade out faster
     if (splashHint) {
