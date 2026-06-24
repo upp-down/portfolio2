@@ -109,9 +109,26 @@
     document.querySelectorAll('.js-animate').forEach(function (el) {
       observer.observe(el);
     });
+
+    // Second observer: js-reveal elements (custom stagger, no default fadeUp)
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.js-reveal').forEach(function (el) {
+      revealObserver.observe(el);
+    });
   } else {
     // Fallback: show everything immediately
-    document.querySelectorAll('.js-animate').forEach(function (el) {
+    document.querySelectorAll('.js-animate, .js-reveal').forEach(function (el) {
       el.classList.add('is-visible');
     });
   }
@@ -163,6 +180,22 @@
       activeCard = null;
     }
   });
+
+  // ── Splash Entrance Animation ───────────────────
+  var splash = document.getElementById('splash');
+  if (splash) {
+    // Check reduced motion preference
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      // Skip animations, show everything immediately
+      splash.classList.add('is-loaded');
+    } else {
+      // Short delay so the browser renders the initial state first
+      setTimeout(function () {
+        splash.classList.add('is-loaded');
+      }, 120);
+    }
+  }
 
   // ── Initial call ────────────────────────────────
   onScroll();
