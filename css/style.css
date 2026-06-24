@@ -840,6 +840,7 @@ a {
   letter-spacing: 0.18em;
   line-height: 0.9;
   margin: 0;
+  white-space: nowrap;
 }
 
 .contents-subtitle {
