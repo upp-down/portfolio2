@@ -100,28 +100,6 @@
     });
   }
 
-  // ── Contents Section Observer (threshold 0.3, once) ──
-  if ('IntersectionObserver' in window) {
-    var contentsObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-contents-visible');
-          contentsObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
-
-    document.querySelectorAll('.js-contents-anim').forEach(function (el) {
-      contentsObserver.observe(el);
-    });
-  } else {
-    document.querySelectorAll('.js-contents-anim').forEach(function (el) {
-      el.classList.add('is-contents-visible');
-    });
-  }
-
   // ── Card Interaction: clear transform after entry animation ──
   document.querySelectorAll('.card').forEach(function (card) {
     card.addEventListener('animationend', function (e) {
