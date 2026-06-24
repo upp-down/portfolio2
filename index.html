@@ -46,34 +46,28 @@
       <h2 class="contents__heading js-contents-anim">CONTENT</h2>
     </div>
 
-    <!-- 下半区：目录列表 -->
+    <!-- 下半区：GRID LAYOUT -->
     <div class="contents__body">
-      <ul class="contents__list">
-        <!-- 条目1：个人信息 -->
-        <li class="contents__item js-contents-anim">
-          <a href="#about">
-            <span class="contents__num">01.</span>
-            <span class="contents__title">ABOUT</span>
-            <span class="contents__subtitle">个人信息</span>
-          </a>
-        </li>
-        <!-- 条目2：主要作品 -->
-        <li class="contents__item js-contents-anim">
-          <a href="#works">
-            <span class="contents__num">02.</span>
-            <span class="contents__title">WORKS</span>
-            <span class="contents__subtitle">主要作品</span>
-          </a>
-        </li>
-        <!-- 条目3：联系我 -->
-        <li class="contents__item js-contents-anim">
-          <a href="#contact">
-            <span class="contents__num">03.</span>
-            <span class="contents__title">CONTACT</span>
-            <span class="contents__subtitle">联系我</span>
-          </a>
-        </li>
-      </ul>
+      <div class="contents-grid">
+        <!-- 列1：个人信息 -->
+        <a href="#about" class="contents-col">
+          <span class="contents-number">01</span>
+          <span class="contents-title">ABOUT</span>
+          <span class="contents-desc">个人信息</span>
+        </a>
+        <!-- 列2：主要作品 -->
+        <a href="#works" class="contents-col">
+          <span class="contents-number">02</span>
+          <span class="contents-title">WORKS</span>
+          <span class="contents-desc">主要作品</span>
+        </a>
+        <!-- 列3：联系我 -->
+        <a href="#contact" class="contents-col">
+          <span class="contents-number">03</span>
+          <span class="contents-title">CONTACT</span>
+          <span class="contents-desc">联系我</span>
+        </a>
+      </div>
     </div>
   </section>
   <!-- 目录页结束 -->
